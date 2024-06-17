@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-title">
+        <h1>Prasun - The guy who controls the gram</h1>
+    </div>
+    <div class="calculator">
+        <h2>Price Calculator</h2>
+        <label for="service">Select service:</label>
+        <select id="service" name="service">
+            <option value="followers">Followers [Premium]</option>
+            <option value="likes">Likes [Like toh me karta tha ussey :( woh bhi premium]</option>
+            <option value="views">Views [Value For Money]</option>
+        </select>
+        <label for="units">Enter number of units (in thousands):</label>
+        <input type="number" id="units" name="units" min="0" required>
+        <button onclick="calculatePrice()">Calculate Price</button>
+        <p id="result"></p>
+    </div>
+    <div class="payment">
+        <h2>Pay Karna Hai Toh Kardo</h2>
+        <p>Don't send before communicating </p>
+        <img src="google-pay-qr-code.png" alt="Google Pay QR Code" class="qr-code">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

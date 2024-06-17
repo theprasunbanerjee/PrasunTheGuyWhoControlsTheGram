@@ -1,0 +1,145 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff7eb9, #ff65a3, #7afcff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    text-align: center;
+}
+
+/* Background gradient animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Page title styling */
+.page-title {
+    margin-bottom: 20px;
+}
+
+.page-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Calculator container styling */
+.calculator {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+/* Calculator title styling */
+.calculator h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Form element styling */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+input, select {
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+}
+
+button {
+    background: linear-gradient(135deg, #ff7eb9, #ff65a3);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff65a3, #ff7eb9);
+}
+
+/* Result styling */
+#result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+/* Payment section styling */
+.payment {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+}
+
+.payment h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.payment p {
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .calculator, .payment {
+        padding: 20px;
+    }
+
+    .page-title h1 {
+        font-size: 1.5em;
+    }
+
+    .calculator h
