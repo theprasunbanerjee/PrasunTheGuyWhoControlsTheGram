@@ -27,3 +27,4 @@ function calculatePrice() {
 // Event listener for input change
 document.getElementById('units').addEventListener('input', calculatePrice);
 
+
