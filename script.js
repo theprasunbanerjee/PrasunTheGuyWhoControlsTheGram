@@ -1,3 +1,4 @@
+// Function to calculate price
 function calculatePrice() {
     const service = document.getElementById('service').value;
     const units = document.getElementById('units').value;
@@ -22,3 +23,7 @@ function calculatePrice() {
     const roundedTotalPrice = Math.ceil(totalPrice);
     document.getElementById('result').innerText = `Total Price: ₹${roundedTotalPrice}`;
 }
+
+// Event listener for input change
+document.getElementById('units').addEventListener('input', calculatePrice);
+
