@@ -12,18 +12,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Changed to min-height */
-    background: linear-gradient(135deg, #ff7eb9, #ff65a3, #7afcff);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
+    min-height: 100vh; /* Changed to min-height for responsiveness */
+    background: linear-gradient(135deg, #ad3b98, #61278f);
+    color: #fff;
     text-align: center;
-}
-
-/* Background gradient animation */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 /* Page title styling */
@@ -40,15 +32,22 @@ body {
 
 /* Calculator container styling */
 .calculator {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(173, 59, 152, 0.8);
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 90%; /* Changed to width percentage */
-    max-width: 600px; /* Added max-width */
+    width: 90%; /* Changed to percentage for responsiveness */
+    max-width: 400px; /* Added max-width for larger screens */
     margin-bottom: 20px;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.calculator:hover {
+    transform: translateY(-10px);
+    opacity: 0.9;
 }
 
 /* Calculator title styling */
@@ -79,19 +78,19 @@ input, select, button {
 }
 
 input, select {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.9);
     color: #333;
 }
 
 button {
-    background: linear-gradient(135deg, #ff7eb9, #ff65a3);
+    background: linear-gradient(135deg, #ff65a3, #ad3b98);
     color: white;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #ff65a3, #ff7eb9);
+    background: linear-gradient(135deg, #ad3b98, #ff65a3);
 }
 
 /* Result styling */
@@ -103,14 +102,13 @@ button:hover {
 
 /* Payment section styling */
 .payment {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(173, 59, 152, 0.8);
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 90%; /* Changed to width percentage */
-    max-width: 600px; /* Added max-width */
+    width: 90%; /* Changed to percentage for responsiveness */
+    max-width: 400px; /* Added max-width for larger screens */
 }
 
 .payment h2 {
@@ -135,13 +133,12 @@ button:hover {
 /* Responsive styling */
 @media (max-width: 600px) {
     .calculator, .payment {
-        width: 100%;
-        padding: 20px; /* Increased padding for better spacing */
-        box-sizing: border-box; /* Added box-sizing for consistent box model */
+        width: 100%; /* Adjusted width for smaller screens */
+        max-width: none; /* Removed max-width for smaller screens */
     }
 
-    .calculator h2 {
-        font-size: 1.3em;
+    .page-title h1 {
+        font-size: 1.5em;
     }
 
     .qr-code {
@@ -149,4 +146,3 @@ button:hover {
         height: 150px;
     }
 }
-
